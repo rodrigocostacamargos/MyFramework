@@ -1,0 +1,31 @@
+﻿using System.Drawing;
+using System.IO;
+using System.Text;
+
+namespace LGT.Framework.Core.Helper
+{
+    public sealed class LGTHelperFile
+    {
+        public static void CreateDirecoty(string directory)
+        {
+            if (!Directory.Exists(directory))
+                Directory.CreateDirectory(directory);
+        }
+
+        public static void GenerateResourceFile(string body, string filepath)
+        {
+            var path = filepath.Substring(0, filepath.LastIndexOf('\\') + 1);
+            CreateDirecoty(path);
+            File.WriteAllText(filepath, body, Encoding.Default);
+        }
+
+        public static void GenerateImageResourceFile(Image image, string filepath)
+        {
+            var path = filepath.Substring(0, filepath.LastIndexOf('\\') + 1);
+            CreateDirecoty(path);
+            //image.Save(filepath);
+            var bitmap = new Bitmap(image);
+            bitmap.Save(filepath);
+        }
+    }
+}

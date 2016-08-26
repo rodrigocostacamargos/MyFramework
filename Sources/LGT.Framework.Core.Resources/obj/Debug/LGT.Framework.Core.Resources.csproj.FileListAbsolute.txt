@@ -1,0 +1,5 @@
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Resources\bin\Debug\LGT.Framework.Core.Resources.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Resources\bin\Debug\LGT.Framework.Core.Resources.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Resources\obj\Debug\ResolveAssemblyReference.cache
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Resources\obj\Debug\LGT.Framework.Core.Resources.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Resources\obj\Debug\LGT.Framework.Core.Resources.pdb

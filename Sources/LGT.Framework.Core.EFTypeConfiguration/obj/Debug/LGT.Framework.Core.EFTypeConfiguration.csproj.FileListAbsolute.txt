@@ -1,0 +1,9 @@
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.EFTypeConfiguration\bin\Debug\LGT.Framework.Core.EFTypeConfiguration.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.EFTypeConfiguration\bin\Debug\LGT.Framework.Core.EFTypeConfiguration.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.EFTypeConfiguration\bin\Debug\LGT.Framework.Core.Entity.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.EFTypeConfiguration\bin\Debug\LGT.Framework.Core.Interfaces.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.EFTypeConfiguration\bin\Debug\LGT.Framework.Core.Entity.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.EFTypeConfiguration\bin\Debug\LGT.Framework.Core.Interfaces.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.EFTypeConfiguration\obj\Debug\ResolveAssemblyReference.cache
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.EFTypeConfiguration\obj\Debug\LGT.Framework.Core.EFTypeConfiguration.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.EFTypeConfiguration\obj\Debug\LGT.Framework.Core.EFTypeConfiguration.pdb

@@ -1,0 +1,19 @@
+﻿using System;
+using LGT.Framework.Core.Infra;
+
+namespace LGT.Framework.Core.Factorys.Dao
+{
+    public class LGTBaseDaoProxy<T> : LGTBaseRealProxy<T>
+    {
+        public LGTBaseDaoProxy()
+            : base()
+        {
+        }
+
+        public LGTBaseDaoProxy(Type type)
+            : base(type)
+        {
+
+        }
+    }
+}

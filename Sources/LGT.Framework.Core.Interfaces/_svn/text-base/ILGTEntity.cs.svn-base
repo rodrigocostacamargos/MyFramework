@@ -1,0 +1,7 @@
+﻿namespace LGT.Framework.Core.Interfaces
+{
+    public interface ILGTEntity
+    {
+        long Id { get; set; }
+    }
+}

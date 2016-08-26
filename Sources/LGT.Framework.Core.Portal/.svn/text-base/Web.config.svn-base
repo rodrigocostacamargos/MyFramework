@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <configSections>
+    <section name="LGTSettings" type="LGT.Framework.Core.Configuration.LGTSettingsSection, LGT.Framework.Core"/>
+  </configSections>
+  <LGTSettings>
+    <Facebook appId="239930892686564" appSecret="252deb35ef278091896febdff4c16c31"/>
+    <Twitter appId="UdovvRSLmhfE2kAsPz0mA" appSecret="w3ZOTCJWxDZ6oGqbraFzI51LxuQWxE1aqVK8vMAaZY"/>
+    <JQueryUICSS Value="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/ui-lightness/jquery-ui.css"/>
+    <DataBaseConnectionString Value="Data Source=LUCIANO\SQLEXPRESS;Initial Catalog=PedeAi;Persist Security Info=True;User ID=sa;Password=botemo"/>
+    <UsingTransactionScopeProxy Value="false"/>
+    <LoginPageRedirect Value="Login.aspx"/>
+    <UsingCSSReset Value="false" />
+    <CryptoSymetricKeyBase Value="Ddas-kj!9((h34sk==hd0;ask==@jhg__0shLUGATda*oRR*^'~"/>
+    <ConcretClassAssemblyPath Value="E:\Projetos\VBPL\SRC"/>
+    <ConcretBizClassAssembly Value="VBPL.BIZ\bin\Debug\VBPL.Biz.dll"/>
+    <ConcretDaoClassAssembly Value="VBPL.DAO\bin\Debug\VBPL.Dao.dll"/>
+    <ConcretDBContextAssembly Value="VBPL.DBContext\bin\Debug\VBPL.DBContext.dll"/>
+  </LGTSettings>
+  <system.web>
+    <compilation debug="true"/>
+  </system.web>
+</configuration>

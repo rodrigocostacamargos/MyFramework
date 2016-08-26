@@ -1,0 +1,7 @@
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Expcetions\bin\Debug\LGT.Framework.Core.Expcetions.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Expcetions\bin\Debug\LGT.Framework.Core.Expcetions.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Expcetions\bin\Debug\LGT.Framework.Core.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Expcetions\bin\Debug\LGT.Framework.Core.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Expcetions\obj\Debug\ResolveAssemblyReference.cache
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Expcetions\obj\Debug\LGT.Framework.Core.Expcetions.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Expcetions\obj\Debug\LGT.Framework.Core.Expcetions.pdb

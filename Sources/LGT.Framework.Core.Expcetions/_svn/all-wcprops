@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Projetos/!svn/ver/1397/LGT-Framework/SRC/LGT.Framework.Core.Expcetions
+END
+LGT.Framework.Core.Expcetions.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Projetos/!svn/ver/1397/LGT-Framework/SRC/LGT.Framework.Core.Expcetions/LGT.Framework.Core.Expcetions.csproj
+END
+LGTNotFindClassForInterfaceException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/Projetos/!svn/ver/1397/LGT-Framework/SRC/LGT.Framework.Core.Expcetions/LGTNotFindClassForInterfaceException.cs
+END
+LGTFrameworkNotConfiguredExpcetion.cs
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Projetos/!svn/ver/1397/LGT-Framework/SRC/LGT.Framework.Core.Expcetions/LGTFrameworkNotConfiguredExpcetion.cs
+END

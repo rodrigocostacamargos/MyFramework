@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/Projetos/!svn/ver/1382/LGT-Framework/SRC/LGT.Framework.Core.Helper
+END
+LGT.Framework.Core.Helper.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Projetos/!svn/ver/1380/LGT-Framework/SRC/LGT.Framework.Core.Helper/LGT.Framework.Core.Helper.csproj
+END
+LGTHelperFramework.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Projetos/!svn/ver/1382/LGT-Framework/SRC/LGT.Framework.Core.Helper/LGTHelperFramework.cs
+END
+LGTHelperConfiguraton.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Projetos/!svn/ver/1404/LGT-Framework/SRC/LGT.Framework.Core.Helper/LGTHelperConfiguraton.cs
+END
+LGTHelperFile.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Projetos/!svn/ver/1379/LGT-Framework/SRC/LGT.Framework.Core.Helper/LGTHelperFile.cs
+END
+LGTHelperHTTP.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Projetos/!svn/ver/1379/LGT-Framework/SRC/LGT.Framework.Core.Helper/LGTHelperHTTP.cs
+END
+LGTHelperCrypto.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Projetos/!svn/ver/1379/LGT-Framework/SRC/LGT.Framework.Core.Helper/LGTHelperCrypto.cs
+END
+LGTHelperImage.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Projetos/!svn/ver/1379/LGT-Framework/SRC/LGT.Framework.Core.Helper/LGTHelperImage.cs
+END

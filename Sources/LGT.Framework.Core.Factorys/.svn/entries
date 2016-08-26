@@ -1,0 +1,77 @@
+10
+
+dir
+1553
+https://fenix/svn/Projetos/LGT-Framework/SRC/LGT.Framework.Core.Factorys
+https://fenix/svn/Projetos
+
+
+
+2011-09-01T13:03:49.501000Z
+1553
+luciano
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+3b7e9b10-84cc-4149-9150-e98f69fdeaa4
+
+LGT.Framework.Core.Factorys.csproj
+file
+
+
+
+
+2011-09-01T13:06:00.078125Z
+73256c79b3439b006653ec2dd45c96d0
+2011-08-25T20:01:14.950000Z
+1533
+luciano
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3756
+
+Dao
+dir
+
+Biz
+dir
+
+Base
+dir
+
+DBContext
+dir
+
+Properties
+dir
+

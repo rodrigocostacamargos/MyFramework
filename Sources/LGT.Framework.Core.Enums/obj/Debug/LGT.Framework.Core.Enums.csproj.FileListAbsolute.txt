@@ -1,0 +1,5 @@
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Enums\bin\Debug\LGT.Framework.Core.Enums.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Enums\bin\Debug\LGT.Framework.Core.Enums.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Enums\obj\Debug\ResolveAssemblyReference.cache
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Enums\obj\Debug\LGT.Framework.Core.Enums.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Enums\obj\Debug\LGT.Framework.Core.Enums.pdb

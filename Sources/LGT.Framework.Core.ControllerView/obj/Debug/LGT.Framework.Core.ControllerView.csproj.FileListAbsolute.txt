@@ -1,0 +1,7 @@
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.ControllerView\bin\Debug\LGT.Framework.Core.ControllerView.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.ControllerView\bin\Debug\LGT.Framework.Core.ControllerView.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.ControllerView\bin\Debug\LGT.Framework.Core.Interfaces.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.ControllerView\bin\Debug\LGT.Framework.Core.Interfaces.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.ControllerView\obj\Debug\ResolveAssemblyReference.cache
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.ControllerView\obj\Debug\LGT.Framework.Core.ControllerView.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.ControllerView\obj\Debug\LGT.Framework.Core.ControllerView.pdb

@@ -1,0 +1,618 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using Facebook;
+using LGT.Framework.Core.Delegates;
+using LGT.Framework.Core.Domain;
+using LGT.Framework.Core.Enums;
+using LGT.Framework.Core.EventArguments;
+using LGT.Framework.Core.Helper;
+using LGT.Framework.Core.Infra;
+using TwitterVB2;
+
+namespace LGT.Framework.Core.WebControls
+{
+    public sealed class LGTSocialHubLogin : Panel, IPostBackDataHandler
+    {
+        private static string UrlReturnLoginSocialNetwork
+        {
+            get
+            {
+
+
+                return LGTHelperHTTP.ResolveApplicationUrl(LGTHelperConfiguraton.RedirectDefaultPage, true);
+                //var req = HttpContext.Current.Request;
+                //var index = req.Url.ToString().IndexOf("?");
+                //return req.Url.ToString().Substring(0, index > -1 ? index : req.Url.ToString().Length);
+            }
+        }
+
+        #region Const
+
+        private const string TbxEmailId = "tbxEmail";
+        private const string TbxPassId = "tbxPass";
+        private const string LbStatusId = "lbStatusLogin";
+
+        private const string FacebookScope = "user_about_me,email";
+
+        #endregion
+
+        #region Div Login no Site
+
+        #region Btn Login
+
+        private Button GetButtonDoLogin()
+        {
+            var btnDoLogin = new Button
+                                 {
+                                     ID = "Login",
+                                     Text = "Login",
+                                     CausesValidation = true,
+                                     ValidationGroup = "LoginProprietario"
+                                 };
+            btnDoLogin.Click += BtnDoLoginClick;
+            return btnDoLogin;
+        }
+
+        private void BtnDoLoginClick(object sender, EventArgs e)
+        {
+            var email = ((TextBox)this.Controls[1].Controls[2].Controls[0]).Text;
+            var pass = ((TextBox)this.Controls[1].Controls[4].Controls[0]).Text;
+
+            //var email = HttpContext.Current.Request.Form[TbxEmailId];
+            //var pass = HttpContext.Current.Request.Form[TbxPassId];
+            SaveInformation(string.Empty, string.Empty, pass, string.Empty, email, LoginType.Owner);
+        }
+
+        #endregion
+
+        #region Tbx de Login
+
+        private static TextBox GetTbxEmail()
+        {
+            var tbx = new TextBox
+                          {
+                              ID = TbxEmailId,
+                              MaxLength = 50,
+                              ValidationGroup = "LoginProprietario"
+                          };
+            tbx.Style.Clear();
+            tbx.Style.Add("width", "90%; float:left;margin-right:4px;");
+
+            return tbx;
+        }
+
+        private static TextBox GetTbxPass()
+        {
+            var tbx = new TextBox
+                          {
+                              ID = TbxPassId,
+                              MaxLength = 50,
+                              TextMode = TextBoxMode.Password,
+                              ValidationGroup = "LoginProprietario"
+                          };
+            tbx.Style.Clear();
+            tbx.Style.Add("width", "90%; float:left;margin-right:4px;");
+
+            return tbx;
+        }
+
+        #endregion
+
+        private HtmlGenericControl GetDivControlLoginInSite()
+        {
+            var tbxUserName = GetTbxEmail();
+            var tbxPass = GetTbxPass();
+
+            var divContent = new HtmlGenericControl("div");
+            divContent.Style.Clear();
+            divContent.Style.Value = "float: left; min-width: 55%; min-height: 100%";
+
+            var divContaPortalTile = new HtmlGenericControl
+                                         {
+                                             InnerHtml =
+                                                 "<div style='width: 100%; height: 20px; text-align: center'>Conta do Portal</div>"
+                                         };
+
+            var pUserNameLabel = new HtmlGenericControl("p")
+                                     {
+                                         InnerHtml = string.Format("<label for='{0}'>Email</label>", tbxUserName.ID)
+                                     };
+
+
+            var pTbxUserName = new HtmlGenericControl("p");
+            pTbxUserName.Controls.Add(tbxUserName);
+
+
+            var vReqTbxUserName = new RequiredFieldValidator
+                                      {
+                                          CssClass = "AsteriskError",
+                                          ControlToValidate = tbxUserName.ID,
+                                          EnableClientScript = true,
+                                          Text = "*",
+                                          ErrorMessage = LGTConsts.LGTValidatorMessages.RequiredField("Email"),
+                                          ToolTip = LGTConsts.LGTValidatorMessages.RequiredField("Email"),
+                                          ValidationGroup = tbxUserName.ValidationGroup,
+                                          Display = ValidatorDisplay.Dynamic
+                                      };
+            pTbxUserName.Controls.Add(vReqTbxUserName);
+
+
+            var pPassLabel = new HtmlGenericControl("p")
+                                 {
+                                     InnerHtml = string.Format("<label for='{0}'>Senha</label>", tbxUserName.ID)
+                                 };
+
+            var pTbxPass = new HtmlGenericControl("p");
+            pTbxPass.Controls.Add(tbxPass);
+
+            var vReqTbxPass = new RequiredFieldValidator
+                                  {
+                                      CssClass = "AsteriskError",
+                                      ControlToValidate = tbxPass.ID,
+                                      EnableClientScript = true,
+                                      Text = "*",
+                                      ErrorMessage = LGTConsts.LGTValidatorMessages.RequiredField("Senha"),
+                                      ToolTip = LGTConsts.LGTValidatorMessages.RequiredField("Senha"),
+                                      ValidationGroup = tbxPass.ValidationGroup,
+                                      Display = ValidatorDisplay.Dynamic
+                                  };
+            pTbxPass.Controls.Add(vReqTbxPass);
+
+            var divButtonEmail = new HtmlGenericControl("div");
+            divButtonEmail.Style.Clear();
+            divButtonEmail.Style.Value = "width: 100%; height: 20px; text-align: right !important; borde:solid 1p red;";
+            divButtonEmail.Controls.Add(GetButtonDoLogin());
+
+            divContent.Controls.Add(divContaPortalTile);
+            divContent.Controls.Add(pUserNameLabel);
+            divContent.Controls.Add(pTbxUserName);
+            divContent.Controls.Add(pPassLabel);
+            divContent.Controls.Add(pTbxPass);
+            divContent.Controls.Add(divButtonEmail);
+            return divContent;
+        }
+
+        #endregion
+
+        #region Separador dos controles
+
+        private static HtmlGenericControl GetDivControlSeparation()
+        {
+            var divSeprator = new HtmlGenericControl("div");
+            divSeprator.Style.Clear();
+            divSeprator.Style.Value =
+                "float: left; display: block; min-height: 100%; min-width: 5%;  border-right: #789 1px solid";
+            return divSeprator;
+        }
+
+        #endregion
+
+        #region Div Login em Rede Social
+
+        private static ImageButton GetBtnTwitter()
+        {
+            var btnTwitter = new ImageButton
+                                 {
+                                     AlternateText = "Twitter",
+                                     ImageUrl = LGTHelperImage.TwitterLogin,
+                                     ToolTip = "Email usando sua conta do Twitter",
+                                     CausesValidation = false
+                                 };
+            btnTwitter.Click += BtnTwitterClick;
+            return btnTwitter;
+        }
+
+
+        private static ImageButton GetBtnFacebook()
+        {
+            var btnFaceBook = new ImageButton
+                                  {
+                                      AlternateText = "Facebook",
+                                      ImageUrl = LGTHelperImage.FaceBookLogin,
+                                      ToolTip = "Email usando sua conta do FaceBook",
+                                      CausesValidation = false
+                                  };
+            btnFaceBook.Click += BtnFaceBookClick;
+            return btnFaceBook;
+        }
+
+        private static void BtnTwitterClick(object sender, ImageClickEventArgs e)
+        {
+            var to = new TwitterOAuth
+                         {
+                             CallbackUrl = UrlReturnLoginSocialNetwork,
+                             ConsumerKey = LGTHelperConfiguraton.TwitterAppId,
+                             ConsumerSecret = LGTHelperConfiguraton.TwitterAppSecret
+                         };
+            HttpContext.Current.Response.Redirect(to.GetAuthorizationLink());
+        }
+
+        private static void BtnFaceBookClick(object sender, ImageClickEventArgs e)
+        {
+            var oauth = new FacebookOAuthClient
+                            {
+                                ClientId = LGTHelperConfiguraton.FaceBookAppId,
+                                RedirectUri = new Uri(UrlReturnLoginSocialNetwork),
+                                ClientSecret = LGTHelperConfiguraton.FaceBookAppSecret
+                            };
+            var loginParameters = new Dictionary<string, object>
+                                      {
+                                          {"response_type", "code"},
+                                          {"scope", FacebookScope}
+                                      };
+
+            HttpContext.Current.Response.Redirect(oauth.GetLoginUrl(loginParameters).ToString());
+        }
+
+
+        private static ValidationSummary GetValidationSummary()
+        {
+            return new ValidationSummary
+                       {
+                           ValidationGroup = "LoginProprietario",
+                           DisplayMode = ValidationSummaryDisplayMode.BulletList,
+                           ShowSummary = true,
+                           ShowMessageBox = true,
+                           HeaderText = "Erros"
+                       };
+        }
+
+        private static HtmlGenericControl GetDivControlLoginInSocialNetwork()
+        {
+            var btnTwitter = GetBtnTwitter();
+            var btnFaceBook = GetBtnFacebook();
+
+            var divContent = new HtmlGenericControl("div");
+            divContent.Style.Clear();
+            divContent.Style.Value = "float: left; min-width: 35%; min-height: 100%; padding-left:2%;";
+
+            var divContaSocialNetworkLabel = new HtmlGenericControl
+                                                 {
+                                                     InnerHtml =
+                                                         "<div style='width: 100%; height: 20px; text-align: center'>Conta da rede social</div>"
+                                                 };
+
+            var divBtnTwitter = new HtmlGenericControl("div");
+            divBtnTwitter.Style.Clear();
+            divBtnTwitter.Style.Value = "float: left;";
+            divBtnTwitter.Controls.Add(btnTwitter);
+
+
+            var divBtnFacebook = new HtmlGenericControl("div");
+            divBtnFacebook.Style.Clear();
+            divBtnFacebook.Controls.Add(btnFaceBook);
+
+            divContent.Controls.Add(divContaSocialNetworkLabel);
+            divContent.Controls.Add(divBtnTwitter);
+            divContent.Controls.Add(divBtnFacebook);
+
+            return divContent;
+        }
+
+        #endregion
+
+        #region Div com controle de logoff
+
+        private static HtmlGenericControl GetDivControlLogOff()
+        {
+            var divLogOff = new HtmlGenericControl("div");
+
+            //var ls = new LoginStatus { ID = LbStatusId };
+            //ls.LoggedOut += LsLoggedOut;
+            var ls = new LinkButton { ID = LbStatusId, Text = "Sair" };
+            ls.Click += LsLoggedOut;
+            var information = GetLoggedInformation();
+            if (information != null)
+            {
+                var literalName =
+                    new LiteralControl(string.IsNullOrEmpty(information.Name) ? information.Email : information.Name);
+                divLogOff.Controls.Add(literalName);
+                divLogOff.Controls.Add(new LiteralControl("&nbsp;&nbsp;&nbsp;"));
+            }
+            divLogOff.Controls.Add(ls);
+            return divLogOff;
+        }
+
+
+        private static string FaceBookLoggedOutUrl(string pToken)
+        {
+            var oauth = new FacebookOAuthClient
+                            {
+                                ClientId = LGTHelperConfiguraton.FaceBookAppId,
+                                RedirectUri = new Uri(UrlReturnLoginSocialNetwork),
+                                ClientSecret = LGTHelperConfiguraton.FaceBookAppSecret
+                            };
+            var loginParameters = new Dictionary<string, object>
+                                      {
+                                          {"response_type", "code"},
+                                          {"scope", FacebookScope},
+                                          {"RedirectUri", UrlReturnLoginSocialNetwork},
+                                          {"next", UrlReturnLoginSocialNetwork},
+                                          {"access_token", pToken}
+                                      };
+
+            var url = oauth.GetLogoutUrl(loginParameters).ToString();
+            //TODO utiliza o ambiente seguro para deslogar do facebook, é um bug no sdk usar a página m.
+            url = url.Replace("http://m.", "https://www.");
+            return url;
+        }
+
+        private static void LsLoggedOut(object sender, EventArgs e)
+        {
+            var loggedInformation = GetLoggedInformation();
+            var sUrl = UrlReturnLoginSocialNetwork;
+            if ((loggedInformation != null) && loggedInformation.LoginType == LoginType.FaceBook)
+            {
+                //somente o facebook precisa de um request específico para deslogar
+                sUrl = FaceBookLoggedOutUrl(loggedInformation.Token);
+            }
+            //garante que a informação é apagada
+            ClearLoggedInformation();
+            //redireciona para a pagina correta
+            HttpContext.Current.Response.Redirect(sUrl);
+        }
+
+        #endregion
+
+        #region IPostBackDataHandler Members
+
+        public bool LoadPostData(string postDataKey, NameValueCollection postCollection)
+        {
+            return HttpContext.Current.Request["__EVENTTARGET"] != null;
+        }
+
+        public void RaisePostDataChangedEvent()
+        {
+            if (HttpContext.Current.Request["__EVENTTARGET"].StartsWith(LbStatusId))
+            {
+                LsLoggedOut(null, null);
+            }
+        }
+
+        #endregion
+
+        #region Events
+        public event LGTExecuteLogin ExecuteLogin;
+
+        private LGTExecuteLoginEventArgs InvokeExecuteLogin(LGTExecuteLoginEventArgs args)
+        {
+            var handler = ExecuteLogin;
+            return handler != null ? handler(this, args) : args;
+        }
+        #endregion
+
+        private void MakeStyle()
+        {
+            Style.Clear();
+            Style.Add("height", "130px");
+            Style.Add("width", "350px");
+            Style.Add("display", "block");
+            Style.Add("overflow", "hidden");
+        }
+
+
+        #region Life Cycle
+        protected override void OnPreRender(EventArgs e)
+        {
+            base.OnPreRender(e);
+            Page.RegisterRequiresPostBack(this);
+        }
+
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            //configura o estilo do painel
+            MakeStyle();
+            if (!IsLogged)
+            {
+                //adiciona os controles para login no sistema
+                Controls.Add(GetDivControlLoginInSite());
+                //adiciona uma div para separar os controles de login do sistema e da rede social
+                Controls.Add(GetDivControlSeparation());
+                //adiciona os controles para login da rede social
+                Controls.Add(GetDivControlLoginInSocialNetwork());
+                //adiciona o validation summary
+                Controls.Add(GetValidationSummary());
+            }
+            else
+            {
+                Controls.Add(GetDivControlLogOff());
+            }
+        }
+
+        #endregion
+
+        #region Controle de Informacao
+
+        private void SaveInformation(string pToken, string pTokenSecret, string pPass, string pName, string pEmail,
+                                     LoginType pLoginType)
+        {
+            var session = HttpContext.Current.Session;
+            if (session[LGTConsts.LGTApplicationVariableName.LoggedUserKey] != null) return;
+            var args = new LGTExecuteLoginEventArgs
+                           {
+                               Autenticated = pLoginType != LoginType.Owner,
+                               Email = pEmail,
+                               Pass = pPass,
+                               Name = pName,
+                               LoginType = pLoginType
+                           };
+            if (pLoginType == LoginType.Owner)
+            {
+                args = InvokeExecuteLogin(args);
+            }
+            if (args.Autenticated)
+            {
+                session[LGTConsts.LGTApplicationVariableName.LoggedUserKey] = new LoggedInformation
+                                                                                  {
+                                                                                      Token = pToken,
+                                                                                      TokenSecret = pTokenSecret,
+                                                                                      Name = pName,
+                                                                                      Email = pEmail,
+                                                                                      LoginType = pLoginType,
+                                                                                      Key = args.Id
+                                                                                  };
+
+                FormsAuthentication.RedirectFromLoginPage(string.IsNullOrEmpty(pName) ? pEmail : pName, false);
+            }
+        }
+
+        private static LoggedInformation GetLoggedInformation()
+        {
+            var session = HttpContext.Current.Session;
+            LoggedInformation info = null;
+            if ((session != null) && session[LGTConsts.LGTApplicationVariableName.LoggedUserKey] != null)
+            {
+                info = (LoggedInformation)session[LGTConsts.LGTApplicationVariableName.LoggedUserKey];
+            }
+            return info;
+        }
+
+        private static void ClearLoggedInformation()
+        {
+            var session = HttpContext.Current.Session;
+            session[LGTConsts.LGTApplicationVariableName.LoggedUserKey] = null;
+        }
+
+        #endregion
+
+        #region Logged Flag
+
+        private bool TwitterIsLogged
+        {
+            get
+            {
+                var req = HttpContext.Current.Request;
+                var t = new TwitterAPI();
+                var isLogged = false;
+                var oAuthToken = string.Empty;
+                var oAuthTokenSecret = string.Empty;
+
+                try
+                {
+                    var loggedInformation = GetLoggedInformation();
+                    if ((loggedInformation != null) && loggedInformation.LoginType == LoginType.Twitter)
+                    {
+                        oAuthToken = loggedInformation.Token;
+                        oAuthTokenSecret = loggedInformation.TokenSecret;
+                    }
+                    else if (req["oauth_token"] != null && req["oauth_verifier"] != null)
+                    {
+                        t.GetAccessTokens(LGTHelperConfiguraton.TwitterAppId, LGTHelperConfiguraton.TwitterAppSecret,
+                                          req["oauth_token"], req["oauth_verifier"]);
+                        oAuthToken = t.OAuth_Token;
+                        oAuthTokenSecret = t.OAuth_TokenSecret;
+                    }
+
+
+                    t.AuthenticateWith(LGTHelperConfiguraton.TwitterAppId, LGTHelperConfiguraton.TwitterAppSecret,
+                                       oAuthToken, oAuthTokenSecret);
+                    var user = t.AccountInformation();
+                    if (user != null)
+                    {
+                        SaveInformation(oAuthToken, oAuthTokenSecret, string.Empty, user.Name, user.ScreenName,
+                                        LoginType.Twitter);
+                        isLogged = true;
+                    }
+                }
+                catch
+                {
+                    isLogged = false;
+                }
+                return isLogged;
+            }
+        }
+
+        private bool FaceBookIsLogged
+        {
+            get
+            {
+                var isLogged = false;
+                var oAuthToken = string.Empty;
+                var req = HttpContext.Current.Request;
+
+                try
+                {
+                    var loggedInformation = GetLoggedInformation();
+                    if ((loggedInformation != null) && (loggedInformation.LoginType == LoginType.FaceBook))
+                    {
+                        oAuthToken = loggedInformation.Token;
+                    }
+                    else if ((req["code"] != null) && req["__EVENTTARGET"] == null)
+                    {
+                        FacebookOAuthResult resultado;
+                        if (FacebookOAuthResult.TryParse(req.Url.ToString(), out resultado))
+                        {
+                            if (resultado.IsSuccess)
+                            {
+
+                                var fo = new FacebookOAuthClient
+                                             {
+                                                 ClientId = LGTHelperConfiguraton.FaceBookAppId,
+                                                 ClientSecret = LGTHelperConfiguraton.FaceBookAppSecret,
+                                                 RedirectUri = new Uri(UrlReturnLoginSocialNetwork)
+                                             };
+
+                                /*var parameters = new Dictionary<string, object>
+                                                     {
+                                                         { "redirect_uri", UrlReturnLoginSocialNetwork }
+                                                         ,{ "permissions", "user_about_me, publish_stream, offline_access, manage_pages" }
+                                                         ,{ "client_secret", LGTHelperConfiguraton.FaceBookAppSecret}
+                                                     };*/
+                                var parameters = new Dictionary<string, object> { { "RedirectUri", UrlReturnLoginSocialNetwork } };
+                                var c = resultado.Code;
+                                dynamic jSontoken = fo.ExchangeCodeForAccessToken(c, parameters);
+                                oAuthToken = jSontoken["access_token"];
+                            }
+                        }
+                    }
+                    if (!string.IsNullOrEmpty(oAuthToken))
+                    {
+                        var fb = new FacebookClient(oAuthToken);
+                        dynamic me = fb.Get("/me");
+                        if (me != null)
+                        {
+                            SaveInformation(oAuthToken, string.Empty, string.Empty, me.name, me.email,
+                                            LoginType.FaceBook);
+                            isLogged = true;
+                        }
+                    }
+                }
+                catch
+                {
+                    isLogged = false;
+                }
+                return isLogged;
+            }
+        }
+
+        private static bool OwnerIsLogged
+        {
+            get
+            {
+                var loggedInformation = GetLoggedInformation();
+                return ((loggedInformation != null) && loggedInformation.LoginType == LoginType.Owner);
+            }
+        }
+
+        public bool IsLogged
+        {
+            get
+            {
+                var fL = FaceBookIsLogged;
+                var tL = TwitterIsLogged;
+                var oL = OwnerIsLogged;
+                return (fL || tL || oL);
+            }
+        }
+
+        #endregion
+    }
+}

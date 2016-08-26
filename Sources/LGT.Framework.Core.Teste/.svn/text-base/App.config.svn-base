@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<configuration>
+  <configSections>
+    <section name="LGTSettings" type="LGT.Framework.Core.Configuration.LGTSettingsSection, LGT.Framework.Core" />
+  </configSections>
+
+  <LGTSettings>
+    <Facebook appId="204100086300230" appSecret="2d353c5259381a1f6f44c6d48f6a0b85" />
+    <Twitter appId="UdovvRSLmhfE2kAsPz0mA" appSecret="w3ZOTCJWxDZ6oGqbraFzI51LxuQWxE1aqVK8vMAaZY" />
+    <JQueryUICSS Value="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/ui-lightness/jquery-ui.css" />
+    <DataBaseConnectionString Value="Data Source=castro\sql2k8;Initial Catalog=VBPL;Persist Security Info=True;User ID=sa;Password=botemo" />
+    <UsingTransactionScopeProxy Value="true" />
+    <Redirects  LoginPage="Login.aspx" DefaultPage="Default.aspx"/>
+    <CryptoSymetricKeyBase Value="Ddas-kj!9((h34sk==hd0;ask==@jhg__0shLUGATda*oRR*^'~" />
+    <ConcretClassAssemblyPath Value="E:\Projetos\LGT-Framework\SRC\LGT.Framework.Core.Teste\bin\Debug"/>
+    <ConcretBizClassAssembly Value="LGTFrameworkTeste.dll"/>
+    <ConcretDaoClassAssembly Value="LGTFrameworkTeste.dll"/>
+    <ConcretDBContextAssembly Value="LGTFrameworkTeste.dll"/>
+  </LGTSettings>
+</configuration>

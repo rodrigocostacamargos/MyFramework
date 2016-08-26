@@ -1,0 +1,13 @@
+﻿using LGT.Framework.Core.Infra;
+using LGT.Framework.Core.LGTException;
+
+namespace LGT.Framework.Core.Expcetions
+{
+    public class LGTFrameworkNotConfiguredExpcetion : LGTBaseExpcetion
+    {
+        public LGTFrameworkNotConfiguredExpcetion(string interfaceName)
+            : base(string.Format(LGTConsts.LGTExceptionMessage.NotFindClassForInterface, interfaceName))
+        {
+        }
+    }
+}

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Projetos/!svn/ver/1533/LGT-Framework/SRC/LGT.Framework.Core.Expcetions
+END
+LGTBaseExpcetion.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Projetos/!svn/ver/1533/LGT-Framework/SRC/LGT.Framework.Core.Expcetions/LGTBaseExpcetion.cs
+END
+LGT.Framework.Core.Expcetions.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Projetos/!svn/ver/1533/LGT-Framework/SRC/LGT.Framework.Core.Expcetions/LGT.Framework.Core.Expcetions.csproj
+END
+LGTNotFindClassForInterfaceException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/Projetos/!svn/ver/1533/LGT-Framework/SRC/LGT.Framework.Core.Expcetions/LGTNotFindClassForInterfaceException.cs
+END
+LGTFactoryNotCreateInstanceException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/Projetos/!svn/ver/1533/LGT-Framework/SRC/LGT.Framework.Core.Expcetions/LGTFactoryNotCreateInstanceException.cs
+END
+LGTTransparentProxyNotFoundMethodException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/Projetos/!svn/ver/1533/LGT-Framework/SRC/LGT.Framework.Core.Expcetions/LGTTransparentProxyNotFoundMethodException.cs
+END
+LGTFrameworkNotConfiguredExpcetion.cs
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/Projetos/!svn/ver/1410/LGT-Framework/SRC/LGT.Framework.Core.Expcetions/LGTFrameworkNotConfiguredExpcetion.cs
+END

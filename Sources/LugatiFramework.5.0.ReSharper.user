@@ -1,0 +1,249 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="572A1E07-82D6-42F6-80F8-B9BC31EACE77/f:LGTHelperFile.cs" caret="140" fromTop="5" />
+      <File id="572A1E07-82D6-42F6-80F8-B9BC31EACE77/f:LGTHelperImage.cs" caret="0" fromTop="0" />
+      <File id="572A1E07-82D6-42F6-80F8-B9BC31EACE77/f:LGTHelperHTTP.cs" caret="653" fromTop="0" />
+      <File id="D3E722A2-3F52-49E7-8F36-4FEE5E60A1EA/d:Biz/f:ILGTBizBase.cs" caret="346" fromTop="15" />
+      <File id="D3E722A2-3F52-49E7-8F36-4FEE5E60A1EA/d:Dao/f:ILGTDaoBase.cs" caret="482" fromTop="22" />
+      <File id="7566E5A2-719D-446C-95DC-82D618F724BD/f:LGTWebResources.cs" caret="5874" fromTop="31" />
+      <File id="572A1E07-82D6-42F6-80F8-B9BC31EACE77/f:LGTHelperFramework.cs" caret="2545" fromTop="8" />
+      <File id="D3E722A2-3F52-49E7-8F36-4FEE5E60A1EA/d:Dao/f:ILGTDaoFactory.cs" caret="146" fromTop="3" />
+      <File id="D3E722A2-3F52-49E7-8F36-4FEE5E60A1EA/d:Biz/f:ILGTBizFactory.cs" caret="159" fromTop="3" />
+      <File id="D3E722A2-3F52-49E7-8F36-4FEE5E60A1EA/d:Base/f:ILGTDBContextFactory.cs" caret="174" fromTop="3" />
+      <File id="0B149E0A-0781-44F7-97B5-F718C4058B95/f:App.config" caret="901" fromTop="13" />
+      <File id="A1919886-B3AE-487C-B453-245E31EBEEEA/d:Infra/f:LGTBaseRealProxy.cs" caret="432" fromTop="8" />
+      <File id="E70F6B09-4971-4CEB-901B-2C89B90F2B46/d:Biz/f:LGTBaseBizProxy.cs" caret="250" fromTop="8" />
+      <File id="D3E722A2-3F52-49E7-8F36-4FEE5E60A1EA/d:Base/f:ILGTBaseFactory.cs" caret="117" fromTop="3" />
+      <File id="0B149E0A-0781-44F7-97B5-F718C4058B95/f:FactoryTest.cs" caret="934" fromTop="3" />
+      <File id="D3E722A2-3F52-49E7-8F36-4FEE5E60A1EA/d:DBContext/d:EF/f:ILGTDbContex.cs" caret="243" fromTop="6" />
+      <File id="0B149E0A-0781-44F7-97B5-F718C4058B95/d:Properties/f:AssemblyInfo.cs" caret="1256" fromTop="12" />
+      <File id="FE86BE95-8B97-429C-90E8-389933E9CC85/f:LGTEFDBContext.cs" caret="487" fromTop="11" />
+      <File id="1CE78F63-C15E-4361-96B5-B006D704379D/f:LGTBizBase.cs" caret="493" fromTop="6" />
+      <File id="E70F6B09-4971-4CEB-901B-2C89B90F2B46/d:Dao/f:LGTDaoFactory.cs" caret="802" fromTop="23" />
+      <File id="A1919886-B3AE-487C-B453-245E31EBEEEA/d:Configuration/f:LGTConfigurationSection.cs" caret="3756" fromTop="6" />
+      <File id="572A1E07-82D6-42F6-80F8-B9BC31EACE77/f:LGTHelperConfiguraton.cs" caret="1713" fromTop="17" />
+      <File id="2A6A88E0-D19A-42EF-A568-E8D964484AF3/f:LGTDaoBase.cs" caret="340" fromTop="4" />
+      <File id="A1919886-B3AE-487C-B453-245E31EBEEEA/d:Infra/f:LGTBaseFactory.cs" caret="2008" fromTop="31" />
+      <File id="E70F6B09-4971-4CEB-901B-2C89B90F2B46/d:Biz/f:LGTBizFactory.cs" caret="650" fromTop="18" />
+      <File id="E70F6B09-4971-4CEB-901B-2C89B90F2B46/d:DBContext/f:LGTDBContextFactory.cs" caret="980" fromTop="24" />
+      <File id="7566E5A2-719D-446C-95DC-82D618F724BD/d:CSS/f:prettyCheckboxes.css" caret="0" fromTop="0" />
+      <File id="A1919886-B3AE-487C-B453-245E31EBEEEA/d:Infra/f:LGTConsts.cs" caret="1965" fromTop="15" />
+      <File id="7566E5A2-719D-446C-95DC-82D618F724BD/d:CSS/f:CSSPrincipal.css" caret="675" fromTop="32" />
+      <File id="94CFF1DE-CDAF-4D00-9B1F-D7DEB2F4005F/f:LGTPage.cs" caret="364" fromTop="13" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="A1919886-B3AE-487C-B453-245E31EBEEEA/d:Infra/f:LGTBaseFactory.cs" caret="2416" fromTop="30" />
+      <File id="A1919886-B3AE-487C-B453-245E31EBEEEA/d:Infra/f:LGTBaseFactory.cs" caret="2347" fromTop="27" />
+      <File id="A1919886-B3AE-487C-B453-245E31EBEEEA/d:Infra/f:LGTBaseFactory.cs" caret="2347" fromTop="15" />
+      <File id="A1919886-B3AE-487C-B453-245E31EBEEEA/d:Infra/f:LGTBaseFactory.cs" caret="1011" fromTop="8" />
+      <File id="A1919886-B3AE-487C-B453-245E31EBEEEA/d:Infra/f:LGTBaseFactory.cs" caret="2556" fromTop="18" />
+      <File id="A1919886-B3AE-487C-B453-245E31EBEEEA/d:Infra/f:LGTBaseFactory.cs" caret="2331" fromTop="12" />
+      <File id="E70F6B09-4971-4CEB-901B-2C89B90F2B46/d:Biz/f:LGTBizFactory.cs" caret="906" fromTop="26" />
+      <File id="E70F6B09-4971-4CEB-901B-2C89B90F2B46/d:Biz/f:LGTBizFactory.cs" caret="808" fromTop="22" />
+      <File id="E70F6B09-4971-4CEB-901B-2C89B90F2B46/d:DBContext/f:LGTDBContextFactory.cs" caret="273" fromTop="6" />
+      <File id="E70F6B09-4971-4CEB-901B-2C89B90F2B46/d:DBContext/f:LGTDBContextFactory.cs" caret="478" fromTop="14" />
+      <File id="E70F6B09-4971-4CEB-901B-2C89B90F2B46/d:Dao/f:LGTDaoFactory.cs" caret="204" fromTop="6" />
+      <File id="E70F6B09-4971-4CEB-901B-2C89B90F2B46/d:Dao/f:LGTDaoFactory.cs" caret="401" fromTop="10" />
+      <File id="1CE78F63-C15E-4361-96B5-B006D704379D/f:LGTBizBase.cs" caret="407" fromTop="0" />
+      <File id="1CE78F63-C15E-4361-96B5-B006D704379D/f:LGTBizBase.cs" caret="631" fromTop="13" />
+      <File id="A1919886-B3AE-487C-B453-245E31EBEEEA/d:Infra/f:LGTBaseFactory.cs" caret="1444" fromTop="15" />
+      <File id="2A6A88E0-D19A-42EF-A568-E8D964484AF3/f:LGTDaoBase.cs" caret="557" fromTop="10" />
+      <File id="572A1E07-82D6-42F6-80F8-B9BC31EACE77/f:LGTHelperConfiguraton.cs" caret="1877" fromTop="22" />
+      <File id="A1919886-B3AE-487C-B453-245E31EBEEEA/d:Configuration/f:LGTConfigurationSection.cs" caret="4489" fromTop="26" />
+      <File id="A1919886-B3AE-487C-B453-245E31EBEEEA/d:Configuration/f:LGTConfigurationSection.cs" caret="4463" fromTop="23" />
+      <File id="E70F6B09-4971-4CEB-901B-2C89B90F2B46/d:DBContext/f:LGTDBContextFactory.cs" caret="980" fromTop="25" />
+      <File id="E70F6B09-4971-4CEB-901B-2C89B90F2B46/d:DBContext/f:LGTDBContextFactory.cs" caret="829" fromTop="17" />
+      <File id="E70F6B09-4971-4CEB-901B-2C89B90F2B46/d:DBContext/f:LGTDBContextFactory.cs" caret="764" fromTop="18" />
+      <File id="E70F6B09-4971-4CEB-901B-2C89B90F2B46/d:DBContext/f:LGTDBContextFactory.cs" caret="591" fromTop="14" />
+      <File id="94CFF1DE-CDAF-4D00-9B1F-D7DEB2F4005F/f:LGTPage.cs" caret="1479" fromTop="1" />
+      <File id="94CFF1DE-CDAF-4D00-9B1F-D7DEB2F4005F/f:LGTPage.cs" caret="340" fromTop="12" />
+      <File id="7566E5A2-719D-446C-95DC-82D618F724BD/d:CSS/f:CSSPrincipal.css" caret="675" fromTop="11" />
+      <File id="7566E5A2-719D-446C-95DC-82D618F724BD/d:CSS/f:CSSPrincipal.css" caret="675" fromTop="13" />
+      <File id="7566E5A2-719D-446C-95DC-82D618F724BD/d:CSS/f:CSSPrincipal.css" caret="675" fromTop="10" />
+      <File id="7566E5A2-719D-446C-95DC-82D618F724BD/d:CSS/f:CSSPrincipal.css" caret="675" fromTop="14" />
+      <File id="7566E5A2-719D-446C-95DC-82D618F724BD/d:CSS/f:CSSPrincipal.css" caret="0" fromTop="0" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="bool" priority="2" />
+      <Item value="return" priority="23" />
+      <Item value="true" priority="1" />
+      <Item value="entity" priority="3" />
+      <Item value="this" priority="2" />
+      <Item value="new" priority="11" />
+      <Item value="if" priority="8" />
+      <Item value="ValidateEntityToDelete`0" priority="1" />
+      <Item value="Dao" priority="1" />
+      <Item value="var" priority="10" />
+      <Item value="canDelete" priority="2" />
+      <Item value="foreach" priority="0" />
+      <Item value="break" priority="0" />
+      <Item value="T`0" priority="10" />
+      <Item value="CurrentDbSet" priority="2" />
+      <Item value="IList" priority="0" />
+      <Item value="where" priority="5" />
+      <Item value="FakeFactory`0" priority="3" />
+      <Item value="public" priority="8" />
+      <Item value="static" priority="5" />
+      <Item value="ThreadStaticAttribute`0" priority="1" />
+      <Item value="default" priority="6" />
+      <Item value="override" priority="6" />
+      <Item value="private" priority="7" />
+      <Item value="lock" priority="1" />
+      <Item value="ObjectLock" priority="0" />
+      <Item value="protected" priority="2" />
+      <Item value="virtual" priority="0" />
+      <Item value="LGTBaseFactory`0" priority="0" />
+      <Item value="null" priority="0" />
+      <Item value="abstract" priority="1" />
+      <Item value="ILGTBaseFactory`0" priority="1" />
+      <Item value="Activator`0" priority="4" />
+      <Item value="obj" priority="0" />
+      <Item value="f2" priority="0" />
+      <Item value="ITeste`0" priority="3" />
+      <Item value="class" priority="0" />
+      <Item value="DateTime`0" priority="1" />
+      <Item value="GetResources`0" priority="1" />
+      <Item value="Assert`0" priority="0" />
+      <Item value="it" priority="0" />
+      <Item value="FakeFactory" priority="0" />
+      <Item value="LGTBizFactory`0" priority="1" />
+      <Item value="string" priority="2" />
+      <Item value="Framework" priority="0" />
+      <Item value="Core" priority="0" />
+      <Item value="Helper" priority="0" />
+      <Item value="LGTHelperConfiguraton`0" priority="0" />
+      <Item value="LGTBizFactory" priority="0" />
+      <Item value="Teste`0" priority="0" />
+      <Item value="ILGTBizBase`0" priority="1" />
+      <Item value="DBContext" priority="0" />
+      <Item value="ILGTDaoBase`0" priority="1" />
+      <Item value="T1`0" priority="5" />
+      <Item value="object" priority="0" />
+      <Item value="_currentValues" priority="0" />
+      <Item value="TesteDeInterface`0" priority="0" />
+      <Item value="ILGTDbContex`0" priority="0" />
+      <Item value="DbContext`0" priority="1" />
+      <Item value="a" priority="1" />
+      <Item value="Database`0" priority="0" />
+      <Item value="myAssembly" priority="0" />
+      <Item value="Assembly`0" priority="0" />
+      <Item value="_currentAssembyFromClassType" priority="1" />
+      <Item value="void" priority="0" />
+      <Item value="objectReturn" priority="0" />
+      <Item value="concretType" priority="1" />
+      <Item value="else" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:LGT.Framework.Core.Biz.LGTBizBase`2">
+      <Item value="DeleteAll`0" priority="0" />
+      <Item value="GetDao`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:T1">
+      <Item value="Delete`0" priority="0" />
+      <Item value="GetIQueryable`0" priority="0" />
+      <Item value="GetLast`0" priority="0" />
+      <Item value="GetFirst`0" priority="0" />
+      <Item value="GetByCriteria`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.IDbSet`1">
+      <Item value="FirstOrDefault`1" priority="0" />
+      <Item value="LastOrDefault`1" priority="0" />
+      <Item value="Where`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="ToList`1" priority="0" />
+      <Item value="AsQueryable`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="ToList`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:LGT.Framework.Core.Infra.LGTBaseFactory">
+      <Item value="GetInstanceInternal`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@LGTFrameworkTeste.FakeFactory">
+      <Item value="Current" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:LGTFrameworkTeste.FakeFactory">
+      <Item value="GetInstance`1" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Activator">
+      <Item value="CreateInstance`0" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:">
+      <Item value="GetInstance`1" priority="0" />
+      <Item value="GetType`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.Assert">
+      <Item value="AreSame`0" priority="0" />
+      <Item value="AreEqual`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:LGTFrameworkTeste.Teste">
+      <Item value="CreateObj" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Empty" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@LGT.Framework.Core.Helper.LGTHelperConfiguraton">
+      <Item value="ConnectionString" priority="0" />
+      <Item value="ConcretBizClassAssembly" priority="1" />
+      <Item value="ConcretDaoClassAssembly" priority="1" />
+      <Item value="ConcretDBContextAssembly" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:LGT.Framework.Core.Configuration.LGTSettingsSection">
+      <Item value="ConcretBizClassAssembly" priority="0" />
+      <Item value="ConcretDaoClassAssembly" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@LGT.Framework.Core.Factorys.Biz.LGTBizFactory">
+      <Item value="Current" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:LGT.Framework.Core.Interfaces.Biz.ILGTBizFactory">
+      <Item value="GetInstance`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@LGT.Framework.Core.Factorys.DBContext.LGTDBContextFactory">
+      <Item value="Current" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@LGT.Framework.Core.Factorys.Dao.LGTDaoFactory">
+      <Item value="Current" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:LGT.Framework.Core.Interfaces.Dao.ILGTDaoFactory">
+      <Item value="GetInstance`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Type">
+      <Item value="IsInstanceOfType`0" priority="0" />
+      <Item value="IsInterface" priority="0" />
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.DbContext">
+      <Item value="SaveChanges`0" priority="0" />
+      <Item value="Database" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Reflection.Assembly">
+      <Item value="ReflectionOnlyLoad`0" priority="0" />
+      <Item value="LoadFrom`0" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

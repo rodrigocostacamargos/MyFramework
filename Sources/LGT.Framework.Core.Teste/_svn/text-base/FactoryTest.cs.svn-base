@@ -1,0 +1,51 @@
+﻿using System;
+using LGT.Framework.Core.Factorys.Biz;
+using LGT.Framework.Core.Factorys.Dao;
+using LGT.Framework.Core.Interfaces.Biz;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace LGTFrameworkTeste
+{
+    public interface ITeste : ILGTBizBase
+    {
+        DateTime CreateObj { get; set; }
+    }
+    public class TesteDeInterface : MarshalByRefObject, ITeste
+    {
+
+        public TesteDeInterface()
+        {
+            this.CreateObj = DateTime.Now;
+
+        }
+        public DateTime CreateObj { get; set; }
+    }
+
+    [TestClass]
+    public class FactoryCreateObjectTeste
+    {
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException), AllowDerivedTypes = false)]
+        public void AssemblyNameEmpty()
+        {
+
+
+            var it = LGTBizFactory.Current.GetInstance<ITeste>();
+
+            var it2 = LGTBizFactory.Current.GetInstance<TesteDeInterface>();
+
+
+
+            //var it = new FakeFactory().GetInstance<Teste>();
+
+            //var it2 = new FakeFactory().GetInstance<Teste>();
+
+
+            Assert.AreSame(it, it2);
+            Assert.AreEqual(it.CreateObj, it2.CreateObj);
+
+
+        }
+    }
+}
+

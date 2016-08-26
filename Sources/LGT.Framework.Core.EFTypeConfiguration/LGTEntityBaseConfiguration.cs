@@ -1,0 +1,28 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.Data.Entity.ModelConfiguration;
+using LGT.Framework.Core.Entity;
+using LGT.Framework.Core.Interfaces.DBContext.EF;
+
+namespace LGT.Framework.Core.EFTypeConfiguration
+{
+    public abstract class LGTEntityBaseConfiguration<T> : EntityTypeConfiguration<T>, ILGTEntityBaseConfiguration<T>
+        where T : LGTBaseEntity
+    {
+        protected LGTEntityBaseConfiguration()
+        {
+            if (isDerivedType) return;
+            ToTable(TableName);
+            HasKey(p => p.Id);
+            Property(p => p.Id)
+                .HasColumnName("Id")
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
+                .IsRequired();
+        }
+
+        protected abstract string TableName { get; }
+        protected virtual bool isDerivedType
+        {
+            get { return false; }
+        }
+    }
+}

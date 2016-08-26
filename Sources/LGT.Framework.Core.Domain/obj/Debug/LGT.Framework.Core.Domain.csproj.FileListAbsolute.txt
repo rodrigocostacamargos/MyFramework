@@ -1,0 +1,9 @@
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Domain\bin\Debug\LGT.Framework.Core.Domain.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Domain\bin\Debug\LGT.Framework.Core.Domain.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Domain\bin\Debug\LGT.Framework.Core.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Domain\bin\Debug\LGT.Framework.Core.Enums.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Domain\bin\Debug\LGT.Framework.Core.Enums.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Domain\bin\Debug\LGT.Framework.Core.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Domain\obj\Debug\ResolveAssemblyReference.cache
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Domain\obj\Debug\LGT.Framework.Core.Domain.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Domain\obj\Debug\LGT.Framework.Core.Domain.pdb

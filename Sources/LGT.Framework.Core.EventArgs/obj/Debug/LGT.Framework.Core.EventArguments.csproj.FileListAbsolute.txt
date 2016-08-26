@@ -1,0 +1,7 @@
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.EventArgs\bin\Debug\LGT.Framework.Core.EventArguments.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.EventArgs\bin\Debug\LGT.Framework.Core.EventArguments.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.EventArgs\bin\Debug\LGT.Framework.Core.Enums.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.EventArgs\bin\Debug\LGT.Framework.Core.Enums.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.EventArgs\obj\Debug\ResolveAssemblyReference.cache
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.EventArgs\obj\Debug\LGT.Framework.Core.EventArguments.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.EventArgs\obj\Debug\LGT.Framework.Core.EventArguments.pdb

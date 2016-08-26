@@ -1,0 +1,17 @@
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Biz\bin\Debug\LGT.Framework.Core.Biz.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Biz\bin\Debug\LGT.Framework.Core.Biz.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Biz\bin\Debug\LGT.Framework.Core.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Biz\bin\Debug\LGT.Framework.Core.Factorys.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Biz\bin\Debug\LGT.Framework.Core.Interfaces.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Biz\bin\Debug\LGT.Framework.Core.Expcetions.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Biz\bin\Debug\LGT.Framework.Core.Helper.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Biz\bin\Debug\LGT.Framework.Core.Resources.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Biz\bin\Debug\LGT.Framework.Core.Factorys.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Biz\bin\Debug\LGT.Framework.Core.Interfaces.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Biz\bin\Debug\LGT.Framework.Core.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Biz\bin\Debug\LGT.Framework.Core.Expcetions.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Biz\bin\Debug\LGT.Framework.Core.Helper.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Biz\bin\Debug\LGT.Framework.Core.Resources.pdb
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Biz\obj\Debug\ResolveAssemblyReference.cache
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Biz\obj\Debug\LGT.Framework.Core.Biz.dll
+C:\Rodrigo\NETProjects\LGTFramework\LGT-Framework\SRC\LGT.Framework.Core.Biz\obj\Debug\LGT.Framework.Core.Biz.pdb

@@ -1,0 +1,25 @@
+﻿function IncludeJavaScript(jsFile) {
+    document.write('<script type="text/javascript" src="' + jsFile + '"></scr' + 'ipt>');
+}
+
+function IncludeCSS(csFile) {
+    document.write('<link href="' + csFile + '" rel="stylesheet" type="text/css" media="all" />');
+}
+
+/*
+IncludeJavaScript("./Resources/JS/UI/prettyCheckboxes.js");
+IncludeJavaScript("./Resources/JS/Validator/jquery.validationEngine.js");
+IncludeJavaScript("./Resources/JS/Validator/jquery.validationEngine-pt.js");
+IncludeJavaScript("./Resources/JS/Validator/other.validations.js");
+
+IncludeCSS("./Resources/CSS/prettyCheckboxes.css");
+IncludeCSS("./Resources/CSS/validationEngine.jquery.css");
+*/
+
+$(document).ready(function () {
+    //Aplica estilo em todos os botões
+    $("input:submit").button();
+    //aplica estilo nos chec
+    $('input[type=checkbox], input[type=radio]').prettyCheckboxes();
+
+}); 

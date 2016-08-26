@@ -1,0 +1,54 @@
+﻿using System;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using LGT.Framework.Core.Helper;
+using LGT.Framework.Core.Infra;
+
+namespace LGT.Framework.Core.WebControls
+{
+    public class LGTPage : Page
+    {
+        protected override void OnPreRender(EventArgs e)
+        {
+            base.OnPreRender(e);
+
+            //LGTHelperFramework.ConfiguraResourceFiles(this, CssPrincipal, JsPrincipal);
+
+
+            var cssPrincipal = new HtmlLink {Href = LGTConsts.LGTFileNames.CssPrincipal};
+            cssPrincipal.Attributes["rel"] = "stylesheet";
+            cssPrincipal.Attributes["type"] = "text/css";
+            cssPrincipal.Attributes["media"] = "all";
+            Page.Header.Controls.AddAt(0, cssPrincipal);
+
+
+            var jsPrincipal = new HtmlGenericControl("script");
+            jsPrincipal.Attributes["type"] = "text/javascript";
+            jsPrincipal.Attributes["src"] = LGTConsts.LGTFileNames.JsPrincipal;
+            Page.Header.Controls.AddAt(0, jsPrincipal);
+
+
+            var css = new HtmlLink {Href = LGTHelperConfiguraton.JQueryCSSUrl};
+            css.Attributes["rel"] = "stylesheet";
+            css.Attributes["type"] = "text/css";
+            css.Attributes["media"] = "all";
+            Page.Header.Controls.AddAt(0, css);
+
+            var cssReset = new HtmlLink {Href = LGTConsts.LGTFileNames.CssUiReset};
+            cssReset.Attributes["rel"] = "stylesheet";
+            cssReset.Attributes["type"] = "text/css";
+            cssReset.Attributes["media"] = "all";
+            Page.Header.Controls.AddAt(0, cssReset);
+
+            var jsJqueryUi = new HtmlGenericControl("script");
+            jsJqueryUi.Attributes["type"] = "text/javascript";
+            jsJqueryUi.Attributes["src"] = LGTConsts.LGTFileNames.JsJqueryUi;
+            Page.Header.Controls.AddAt(0, jsJqueryUi);
+
+            var jsJquery = new HtmlGenericControl("script");
+            jsJquery.Attributes["type"] = "text/javascript";
+            jsJquery.Attributes["src"] = LGTConsts.LGTFileNames.JsJqueryUrl;
+            Page.Header.Controls.AddAt(0, jsJquery);
+        }
+    }
+}

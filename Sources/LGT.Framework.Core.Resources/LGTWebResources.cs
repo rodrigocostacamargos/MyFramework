@@ -1,0 +1,147 @@
+﻿using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Web.UI;
+
+#region Estilos CSS
+
+[assembly: WebResource("LGT.Framework.Core.Resources.CSS.CSSPrincipal.css", "text/css", PerformSubstitution = true)]
+[assembly: WebResource("LGT.Framework.Core.Resources.CSS.prettyCheckboxes.css", "text/css", PerformSubstitution = true)]
+
+#endregion
+
+#region JavaScripts
+
+[assembly: WebResource("LGT.Framework.Core.Resources.JS.UI.prettyCheckboxes.js", "text/javascript")]
+[assembly: WebResource("LGT.Framework.Core.Resources.JS.JSPrincipal.js", "text/javascript")]
+
+#endregion
+
+#region Imagens
+
+[assembly: WebResource("LGT.Framework.Core.Resources.images.LoginControl.facebook.png", "image/png")]
+[assembly: WebResource("LGT.Framework.Core.Resources.images.LoginControl.twitter.png", "image/png")]
+[assembly: WebResource("LGT.Framework.Core.Resources.images.prettyCheckboxes.checkbox.gif", "image/gif")]
+[assembly: WebResource("LGT.Framework.Core.Resources.images.prettyCheckboxes.radio.gif", "image/gif")]
+
+#endregion
+
+namespace LGT.Framework.Core.Resources
+{
+    public class LGTWebResources
+    {
+        private static IEnumerable<string> JsFileName
+        {
+            get
+            {
+                var list = new List<string>
+                               {
+                                   "LGT.Framework.Core.Resources.JS.UI.prettyCheckboxes.js",
+                                   //"LGT.Framework.Core.Resources.JS.Validator.jquery.validationEngine.js",
+                                   //"LGT.Framework.Core.Resources.JS.Validator.jquery.validationEngine-pt.js",
+                                   //"LGT.Framework.Core.Resources.JS.Validator.other.validations.js",
+                                   "LGT.Framework.Core.Resources.JS.JSPrincipal.js"
+                               };
+                return list;
+            }
+        }
+
+        private static IEnumerable<string> CssFileName
+        {
+            get
+            {
+                var list = new List<string>
+                               {
+                                   "LGT.Framework.Core.Resources.CSS.prettyCheckboxes.css",
+                                   //"LGT.Framework.Core.Resources.CSS.validationEngine.jquery.css",
+                                   "LGT.Framework.Core.Resources.CSS.CSSPrincipal.css"
+                               };
+                return list;
+            }
+        }
+
+        private static IEnumerable<string> ImageFileName
+        {
+            get
+            {
+                var list = new List<string>
+                               {
+                                   "LGT.Framework.Core.Resources.images.LoginControl.facebook.png",
+                                   "LGT.Framework.Core.Resources.images.LoginControl.twitter.png",
+                                   "LGT.Framework.Core.Resources.images.prettyCheckboxes.checkbox.gif",
+                                   "LGT.Framework.Core.Resources.images.prettyCheckboxes.radio.gif"
+                               };
+                return list;
+            }
+        }
+
+        private string GetTextFileContent(IEnumerable<string> files)
+        {
+            var query = (from f in files
+                         let s = GetType().Assembly.GetManifestResourceStream(f)
+                         where s != null
+                         select
+                             new
+                                 {
+                                     ContenFile = new StreamReader(s, Encoding.GetEncoding("ISO-8859-1")).ReadToEnd(),
+                                     FileName = f
+                                 });
+
+            var strBuilder = new StringBuilder();
+            foreach (var line in
+                query.ToList().Select(
+                    q =>
+                    string.Format("/*Inicio do Recurso {0}*/ \r\n {1} \r\n /*Fim do Recurso {0}*/\r\n", q.FileName,
+                                  q.ContenFile)))
+            {
+                strBuilder.AppendLine(line);
+            }
+
+            return strBuilder.ToString();
+        }
+
+        private Dictionary<string, Image> GetImageFileContent(IEnumerable<string> files)
+        {
+            var rootNamespace = GetType().Namespace;
+            var prefixNamespace = rootNamespace.Substring(0, rootNamespace.LastIndexOf(".") + 1);
+            var dic = new Dictionary<string, Image>();
+            foreach (var file in files)
+            {
+                var pathFileName = file.Replace(prefixNamespace, string.Empty).Replace(".", "\\");
+                var lastIndexslash = pathFileName.LastIndexOf("\\");
+                var key = string.Format("{0}.{1}", pathFileName.Substring(0, lastIndexslash),
+                                           pathFileName.Substring(lastIndexslash + 1));
+
+                using (var s = GetType().Assembly.GetManifestResourceStream(file))
+                {
+                    if (s == null) continue;
+                    if (!dic.ContainsKey(key))
+                    {
+                        dic.Add(key, new Bitmap(s));
+                    }
+                }
+            }
+            return dic;
+        }
+
+        public static string GetJsFileContent()
+        {
+            var current = new LGTWebResources();
+            return current.GetTextFileContent(JsFileName);
+        }
+
+        public static string GetCssFileContent()
+        {
+            var current = new LGTWebResources();
+            return current.GetTextFileContent(CssFileName);
+        }
+
+        public static Dictionary<string, Image> GetImageContent()
+        {
+            var current = new LGTWebResources();
+            return current.GetImageFileContent(ImageFileName);
+        }
+    }
+}

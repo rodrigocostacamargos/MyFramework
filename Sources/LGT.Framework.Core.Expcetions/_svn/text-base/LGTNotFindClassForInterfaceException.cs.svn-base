@@ -1,0 +1,14 @@
+﻿using LGT.Framework.Core.Infra;
+using LGT.Framework.Core.LGTException;
+
+namespace LGT.Framework.Core.Expcetions
+{
+    public class LGTNotFindClassForInterfaceException : LGTBaseExpcetion
+    {
+        public LGTNotFindClassForInterfaceException()
+            : base(LGTConsts.LGTExceptionMessage.FrameworkNotConfigured)
+        {
+
+        }
+    }
+}

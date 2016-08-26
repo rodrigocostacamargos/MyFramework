@@ -1,0 +1,44 @@
+﻿*
+{
+    color: #789;
+    font: 13px/16px "Lucida Grande" , Arial, Sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+   /* text-align: left !important;
+    padding: 0 !important;
+    margin: 0 !important;*/
+}
+
+/*html, body
+{
+    min-height: 100% !important;
+    height: 100% !important;
+    height: auto !important;
+}*/
+
+LI
+{
+    list-style-type: none;
+}
+
+
+input.ui-button
+{
+    padding: 5px 8px 5px 8px !important;
+}
+
+
+
+input[type=text], input[type=password]
+{
+    border: #ace 1px solid;
+    display: block;
+    margin: 0px 0px 5px;
+    -moz-border-radius: 4x;
+    -webkit-border-radius: 4px;
+}
+
+.AsteriskError
+{
+    color: #FF0000;
+}
